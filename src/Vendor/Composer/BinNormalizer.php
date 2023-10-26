@@ -39,7 +39,11 @@ final class BinNormalizer implements Normalizer
 
         \sort($bin);
 
-        $decoded->bin = $bin;
+        if ([] === $bin) {
+            unset($decoded->bin);
+        } else {
+            $decoded->bin = $bin;
+        }
 
         /** @var string $encoded */
         $encoded = \json_encode(

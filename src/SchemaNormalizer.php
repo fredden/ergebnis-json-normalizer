@@ -29,6 +29,7 @@ final class SchemaNormalizer implements Normalizer
         private readonly SchemaStorage $schemaStorage,
         private readonly SchemaValidator\SchemaValidator $schemaValidator,
         private readonly Pointer\Specification $specificationForPointerToDataThatShouldNotBeSorted,
+        private readonly bool $pruneEmpty = false,
     ) {
     }
 
